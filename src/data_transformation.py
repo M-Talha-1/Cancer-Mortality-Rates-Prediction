@@ -1,4 +1,4 @@
-from data_ingest import DataIngestion
+from data_ingestion import DataIngestion
 import pandas as pd
 from sklearn.model_selection import train_test_split as tts
 
