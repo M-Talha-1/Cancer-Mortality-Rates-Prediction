@@ -9,7 +9,7 @@ from feature_engineering import (
     cat_to_column,
     one_hot_encoding
 )
-IngestData = DataIngestion("./regression_data/data/cancer_reg.csv")
+IngestData = DataIngestion("./data/raw_data/cancer_reg.csv")
 df = IngestData.load_data()
 
 constant_columns = find_constant_column(df)
@@ -24,4 +24,4 @@ df = cat_to_column(df)
 df = one_hot_encoding(df)
 df = drop_and_fill(df)
 print(df.shape)
-df.to_csv("regression_data/cancer_reg_processed.csv", index=False)
+df.to_csv("./data/processed_data/cancer_reg_processed.csv", index=False)
